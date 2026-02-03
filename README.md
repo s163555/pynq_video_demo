@@ -29,7 +29,7 @@ A hardware-accelerated "Moiré Pattern" generator running on the Pynq-Z1 (Zynq-7
 2. Use the provided Jupyter notebook to load the overlay:
 ```python
 from pynq import Overlay
-ol = Overlay("pynq\_video\_demo.bit")
+ol = Overlay("pynq_video_demo.bit")
 ```
 
 ### A Critical "Pro Tip" for Vivado \& Git
