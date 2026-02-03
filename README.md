@@ -25,7 +25,7 @@ A hardware-accelerated "Moiré Pattern" generator running on the Pynq-Z1 (Zynq-7
 
 ## How to Run (Headless)
 
-1. Transfer the generated `.bit` and `.hwh` files to the Pynq board via Samba (`\\\\pynq\\xilinx`).
+1. Transfer the generated `.bit` and `.hwh` files to the Pynq board via Samba (`\\pynq\xilinx`).
 2. Use the provided Jupyter notebook to load the overlay:
 ```python
 from pynq import Overlay
@@ -38,5 +38,5 @@ Vivado's project file (`.xpr`) and Block Design file (`.bd`) are XML-based but c
 **The Golden Rule:**
 When you get your project working (successfully generating a bitstream), run this command in the Vivado Tcl Console:
 ```tcl
-write\_project\_tcl -paths\_relative rebuild\_project.tcl
+write_project_tcl -paths_relative rebuild_project.tcl
 ```
