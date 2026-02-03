@@ -1,79 +1,41 @@
-# \# Pynq-Z1 FPGA Screensaver
+# Pynq-Z1 FPGA Screensaver
+A hardware-accelerated "Moiré Pattern" generator running on the Pynq-Z1 (Zynq-7000 SoC). This project generates 720p video in real-time using custom VHDL logic, bypassing the CPU for rendering.
 
-# 
+## Architecture
 
-# A hardware-accelerated "Moiré Pattern" generator running on the Pynq-Z1 (Zynq-7000 SoC). This project generates 720p video in real-time using custom VHDL logic, bypassing the CPU for rendering.
+- **Target Board:** Pynq-Z1 (`xc7z020clg400-1`)
+- **Toolchain:** Vivado 2025.2
+- **Video Output:** HDMI (720p @ 60Hz)
+- **Clock Domains:**
+    - Logic/AXI: 100 MHz
+    - Video Pixel Clock: 74.25 MHz
 
-# 
+## Project Structure
 
-# \## Architecture
+- `moire\_pattern\_gen.vhd`: Custom IP core handling the pattern generation and timing logic.
+- `pynq\_z1\_hdmi.xdc`: Physical constraints mapping HDMI signals to the board pins.
+- `design\_1.bd`: Block Design connecting the Zynq PS, VTC, and custom IP.
 
-# \- \*\*Target Board:\*\* Pynq-Z1 (`xc7z020clg400-1`)
+## Setup Instructions
 
-# \- \*\*Toolchain:\*\* Vivado 2025.2
+1. Open the project in Vivado.
+2. Ensure the "Digilent Vivado Library" is added to the IP Repository (required for `rgb2dvi`).
+3. Validate the Block Design to ensure clock domain crossings are correct.
+4. Run Synthesis -> Implementation -> Generate Bitstream.
 
-# \- \*\*Video Output:\*\* HDMI (720p @ 60Hz)
+## How to Run (Headless)
 
-# \- \*\*Clock Domains:\*\*
-
-# &nbsp; - Logic/AXI: 100 MHz
-
-# &nbsp; - Video Pixel Clock: 74.25 MHz
-
-# 
-
-# \## Project Structure
-
-# \- `moire\_pattern\_gen.vhd`: Custom IP core handling the pattern generation and timing logic.
-
-# \- `pynq\_z1\_hdmi.xdc`: Physical constraints mapping HDMI signals to the board pins.
-
-# \- `design\_1.bd`: Block Design connecting the Zynq PS, VTC, and custom IP.
-
-# 
-
-# \## Setup Instructions
-
-# 1\. Open the project in Vivado.
-
-# 2\. Ensure the "Digilent Vivado Library" is added to the IP Repository (required for `rgb2dvi`).
-
-# 3\. Validate the Block Design to ensure clock domain crossings are correct.
-
-# 4\. Run Synthesis -> Implementation -> Generate Bitstream.
-
-# 
-
-# \## How to Run (Headless)
-
-# 1\. Transfer the generated `.bit` and `.hwh` files to the Pynq board via Samba (`\\\\pynq\\xilinx`).
-
-# 2\. Use the provided Jupyter notebook to load the overlay:
-
-# &nbsp;  ```python
-
-# &nbsp;  from pynq import Overlay
-
-# &nbsp;  ol = Overlay("pynq\_video\_demo.bit")
-
-
-### A Critical "Pro Tip" for Vivado \& Git
-===
-
-# Vivado's project file (`.xpr`) and Block Design file (`.bd`) are XML-based but change drastically with every click. They are painful to merge if two people work on them.
-
-# 
-
-# \*\*The Golden Rule:\*\*
-
-# When you get your project working (successfully generating a bitstream), run this command in the Vivado Tcl Console:
-
-# 
-
-# ```tcl
-
-write\_project\_tcl -paths\_relative rebuild\_project.tcl
+1. Transfer the generated `.bit` and `.hwh` files to the Pynq board via Samba (`\\\\pynq\\xilinx`).
+2. Use the provided Jupyter notebook to load the overlay:
+```python
+from pynq import Overlay
+ol = Overlay("pynq\_video\_demo.bit")
 ```
 
-===
-
+### A Critical "Pro Tip" for Vivado \& Git
+Vivado's project file (`.xpr`) and Block Design file (`.bd`) are XML-based but change drastically with every click. They are painful to merge if two people work on them.
+**The Golden Rule:**
+When you get your project working (successfully generating a bitstream), run this command in the Vivado Tcl Console:
+```tcl
+write\_project\_tcl -paths\_relative rebuild\_project.tcl
+```
