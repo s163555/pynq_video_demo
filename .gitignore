@@ -3,9 +3,9 @@
 *.log
 *.str
 *.dmp
-.Xil/
-.cache/
-.hw/
+*.Xil/
+*.cache/
+*.hw/
 
 # Simulation files
 *.sim/
