@@ -1,11 +1,15 @@
 # Vivado Project output files
-*.jou
 *.log
+*.jou
 *.str
-*.dmp
-*.Xil/
+*.os
+.Xil/
 *.cache/
+*.gen/
 *.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
 
 # Simulation files
 *.sim/
@@ -19,8 +23,8 @@
 # IP & Managed Code (Tricky area)
 # Generally, we want to keep the .xci (IP config) but ignore the generated output products
 # However, for Block Designs, we often need the wrapper.
-*.ip_user_files/
-*.gen/
+**/*.ip_user_files/
+**/*.gen/
 
 # Pynq/Software specific
 __pycache__/
