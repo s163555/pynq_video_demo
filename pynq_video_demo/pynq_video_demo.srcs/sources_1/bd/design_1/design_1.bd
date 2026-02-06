@@ -16,7 +16,8 @@
       "v_axi4s_vid_out_0": "",
       "moire_pattern_gen_0": "",
       "proc_sys_reset_0": "",
-      "rgb2dvi_0": ""
+      "rgb2dvi_0": "",
+      "clk_wiz_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1893,12 +1894,16 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "76923080",
-                "value_src": "user_prop"
+                "value": "74250000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK1",
-                "value_src": "default_prop"
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -1941,12 +1946,16 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "76923080",
-                "value_src": "user_prop"
+                "value": "74250000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_processing_system7_0_0_FCLK_CLK1",
-                "value_src": "default_prop"
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
               }
             }
           },
@@ -1982,6 +1991,37 @@
             "value": "3"
           },
           "kRstActiveHigh": {
+            "value": "false"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "17",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "xci_path": "ip\\design_1_clk_wiz_0_0\\design_1_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "245.495"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "245.344"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "74.25"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "37.125"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "12.500"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "4"
+          },
+          "USE_RESET": {
             "value": "false"
           }
         }
@@ -2026,6 +2066,23 @@
       }
     },
     "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "moire_pattern_gen_0/aclk",
+          "v_tc_0/clk",
+          "v_axi4s_vid_out_0/aclk",
+          "v_axi4s_vid_out_0/vid_io_out_clk",
+          "rgb2dvi_0/PixelClk",
+          "proc_sys_reset_0/slowest_sync_clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
@@ -2033,15 +2090,10 @@
           "moire_pattern_gen_0/aresetn"
         ]
       },
-      "processing_system7_0_FCLK_CLK1": {
+      "processing_system7_0_FCLK_CLK0": {
         "ports": [
-          "processing_system7_0/FCLK_CLK1",
-          "v_tc_0/clk",
-          "v_axi4s_vid_out_0/aclk",
-          "v_axi4s_vid_out_0/vid_io_out_clk",
-          "proc_sys_reset_0/slowest_sync_clk",
-          "rgb2dvi_0/PixelClk",
-          "moire_pattern_gen_0/aclk"
+          "processing_system7_0/FCLK_CLK0",
+          "clk_wiz_0/clk_in1"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
