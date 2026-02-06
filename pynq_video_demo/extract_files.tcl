@@ -17,8 +17,16 @@ set bit_src "$impl_dir/${top_name}.bit"
 set hwh_src "$proj_dir/${proj_name}.gen/sources_1/bd/${bd_name}/hw_handoff/${bd_name}.hwh"
 
 # 3. Define Destination Paths (Project Root)
-set bit_dst "$proj_dir/${target_name}.bit"
-set hwh_dst "$proj_dir/${target_name}.hwh"
+set timestamp [clock format [clock seconds] -format %Y%m%d_%H%M]
+set release_dir "[get_property DIRECTORY [current_project]]/../releases"
+
+# Create the releases directory if it doesn't exist
+if {![file exists $release_dir]} {
+    file mkdir $release_dir
+}
+
+set bit_dst "$release_dir/${target_name}_${timestamp}.bit"
+set hwh_dst "$release_dir/${target_name}_${timestamp}.hwh"
 
 # 4. Perform the Copy
 puts "-------------------------------------------------------"
