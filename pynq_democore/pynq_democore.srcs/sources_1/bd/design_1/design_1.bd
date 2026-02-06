@@ -3,7 +3,7 @@
     "design_info": {
       "boundary_crc": "0x6C5BC8F79C9ABED4",
       "device": "xc7z020clg400-1",
-      "gen_directory": "../../../../pynq_video_demo.gen/sources_1/bd/design_1",
+      "gen_directory": "../../../../pynq_democore.gen/sources_1/bd/design_1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",

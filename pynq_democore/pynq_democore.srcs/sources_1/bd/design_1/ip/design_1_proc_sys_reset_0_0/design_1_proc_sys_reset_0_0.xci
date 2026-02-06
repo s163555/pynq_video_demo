@@ -5,7 +5,7 @@
     "cell_name": "proc_sys_reset_0",
     "component_reference": "xilinx.com:ip:proc_sys_reset:5.0",
     "ip_revision": "17",
-    "gen_directory": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0",
+    "gen_directory": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0",
     "parameters": {
       "component_parameters": {
         "C_NUM_PERP_ARESETN": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -48,7 +48,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "17" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2025.2" } ],
@@ -192,5 +192,5 @@
       }
     }
   },
-  "checksum": "3c11c256"
+  "checksum": "45407379"
 }

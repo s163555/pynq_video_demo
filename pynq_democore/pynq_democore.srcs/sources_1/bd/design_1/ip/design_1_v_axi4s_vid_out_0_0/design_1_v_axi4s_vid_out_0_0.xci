@@ -5,7 +5,7 @@
     "cell_name": "v_axi4s_vid_out_0",
     "component_reference": "xilinx.com:ip:v_axi4s_vid_out:4.0",
     "ip_revision": "20",
-    "gen_directory": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0",
+    "gen_directory": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "design_1_v_axi4s_vid_out_0_0", "resolve_type": "user", "usage": "all" } ],
@@ -58,7 +58,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "20" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2025.2" } ],
@@ -240,5 +240,5 @@
       }
     }
   },
-  "checksum": "0cf13bd8"
+  "checksum": "4796f770"
 }

@@ -5,7 +5,7 @@
     "cell_name": "rgb2dvi_0",
     "component_reference": "digilentinc.com:ip:rgb2dvi:1.4",
     "ip_revision": "8",
-    "gen_directory": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0",
+    "gen_directory": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "design_1_rgb2dvi_0_0", "resolve_type": "user", "usage": "all" } ],
@@ -46,7 +46,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "8" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../pynq_video_demo.gen/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../pynq_democore.gen/sources_1/bd/design_1/ip/design_1_rgb2dvi_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2025.2" } ],
@@ -185,5 +185,5 @@
       }
     }
   },
-  "checksum": "2da90d47"
+  "checksum": "37bbc8b4"
 }
