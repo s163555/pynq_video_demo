@@ -10,7 +10,6 @@ entity moire_pattern_gen is
     Port (
         aclk    : in STD_LOGIC;
         aresetn : in STD_LOGIC;
-
         m_axis_video_tdata  : out STD_LOGIC_VECTOR(23 downto 0); 
         m_axis_video_tvalid : out STD_LOGIC;
         m_axis_video_tready : in  STD_LOGIC;
@@ -21,17 +20,14 @@ entity moire_pattern_gen is
 end moire_pattern_gen;
 
 architecture Behavioral of moire_pattern_gen is
-
     signal h_count : unsigned(11 downto 0) := (others => '0');
     signal v_count : unsigned(11 downto 0) := (others => '0');
-
     signal frame_count : unsigned(15 downto 0) := (others => '0');
     signal axis_valid : std_logic := '0';
     signal axis_last  : std_logic := '0';
     signal axis_user  : std_logic := '0';
 
 begin
-
     m_axis_video_tvalid <= axis_valid;
     m_axis_video_tlast  <= axis_last;
     m_axis_video_tuser  <= axis_user;
